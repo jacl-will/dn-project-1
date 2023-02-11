@@ -8,20 +8,34 @@
     <body>
         <h1>Your next date...</h1>
             <button id="dnBtn">Click</button>
-        <h2>Basic Date Ideas</h2>
-            <ul>
-                <li>Movie Night</li>
-                <li>Dinner Out</li>
-                <li>Walk/hike</li>
-                <li>Museum</li>
-            </ul>
-        <h2>Add Your Ideas</h2>
-            <form id="personal-ideas">
-                <input type="text" name="" id="newIdea">
-                <!-- <input type="submit" name="submit"/> -->
-                <!-- <button type="button" onclick="add()" class="submitBtn"></button> -->
-                <input type="button" value="add to list" id="add"/>
-            </form>
+        
+        <div class="ideaLists">    
+            <div id="basicIdeas">
+                <h3>Basic Date Ideas</h3>
+                    <p>
+                        <input class="checkBox" type="checkbox" unchecked="unchecked">                        <label>Movie Night</label>
+                    </p>
+                    <p>
+                        <input class="checkBox" type="checkbox" unchecked="unchecked">                        <label>Dinner Out</label>
+                    </p>
+                    <p>   <input class="checkBox" type="checkbox" unchecked="unchecked">
+                        <label>Walk/hike</label>
+                    </p>
+                    <p>
+                        <input class="checkBox" type="checkbox" unchecked="unchecked">
+                        <label>Museum</label>
+                    </p>
+            </div>
+            <div id="userIdeas">
+                <h3>Add Your Ideas</h3>
+                    <form id="personal-ideas">
+                        <input type="text" name="" id="newIdea">
+                        <!-- <input type="submit" name="submit"/> -->
+                        <!-- <button type="button" onclick="add()" class="submitBtn"></button> -->
+                        <input type="button" value="Submit" id="add"/>
+                    </form>
+            </div>
+        </div>
         <h2>The Ultimate List</h2>
             <ul id="ultimateList">
 

@@ -16,7 +16,7 @@ function netflixButton() {
     console.log(netflixButton)
 }
 
-//drag li items to list area?
+//drag li items to list area? ---> check box that adds it to the ultimate list 
 
 //fullscreenchange possible event for when soemthing is returned from clicking dnBtn
 
@@ -25,11 +25,10 @@ function netflixButton() {
 //need to reset form once something is input
 
 //form submit
-
 const form = document.getElementById("personal-ideas") 
 form.addEventListener("submit", (addIdea) => {
     addIdea.preventDefault()
-    console.log("submit", addIdea)
+    // console.log("submit", addIdea)
 
 }) 
 

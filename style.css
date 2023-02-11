@@ -1,5 +1,6 @@
 body {
     background-color: lavender;
+    /* background-image: url(https://1drv.ms/u/s!AsnQQ8WD7LCRgpRHOezJmKtyZgmiuw?e=msijJY"); */
 }
 
 h1 {
@@ -15,3 +16,70 @@ h2 {
     font-style: normal;
     font-weight: 400;
 }
+
+.ideasList {
+    box-sizing: border-box;
+    display: table;
+    width: 566px;
+    /* line-height: 22.5px; */
+}
+
+#basicIdeas {
+    background-color: aliceblue;
+    box-sizing: border-box;
+    display: table-cell;
+    width: 218px;
+    line-height: 22.5px;
+    text-size-adjust: 100%;
+}
+
+#userIdeas {
+    background-color: beige;
+    box-sizing: border-box;
+    display: table-cell;
+    width: 218px;
+    line-height: 22.5px;
+    text-size-adjust: 100%;
+}
+
+.checkBox {
+    border-color: black;
+    height: 24px;
+    position: relative;
+    top: 6px;
+}
+
+#personal-ideas {
+    box-shadow: 0 5px 10px rgb(140, 139, 140);
+    padding: 1em 10px 20px 1.5em;
+    display: block;
+    margin-top: 0em;
+    margin-right: 80em;
+    box-sizing: border-box;
+    line-height: 22.5px;
+    text-size-adjust: 100%;
+}
+
+#ultimateList {
+    font-size: 20px;
+}
+/* trying to make two collumns next to one another for the initial ideas*/ 
+/* #basicIdeas {
+    /* content: "";
+    display: table;
+    clear:both; 
+    box-sizing: border-box;
+    display: block;
+    line-height: 12px;
+    text-align: center;
+    text-size-adjust: 100%;
+    width: 215.234px
+}
+
+#userIdeas {
+    box-sizing: border-box;
+    display: block;
+    line-height: 12px;
+    text-align: center;
+    text-size-adjust: 100%;
+} */
