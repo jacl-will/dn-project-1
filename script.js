@@ -8,19 +8,20 @@ const form = document.getElementById("personal-ideas")
 form.addEventListener("submit", (event) => {
     event.preventDefault()
     var addIdea = document.getElementById("newIdea").value
-    console.log("newIdea", addIdea)
-   
+    console.log("event", event)
+   event.target.reset()
 }) 
 //need to reset form once something is input
 
 //input text gets added to The Ultimate List
-document.getElementById("add").onclick = function() {
+const addUltimateList = document.getElementById("add");
+addUltimateList.addEventListener("click", (e) => {
     var node = document.createElement("li")
     var text = document.getElementById("newIdea").value;
     var textnode = document.createTextNode(text);
     node.appendChild(textnode);
     document.getElementById("ultimateList").appendChild(node);
-}
+})
 
 //date night button - needs to return a random item from unordered list
 const element1 = document.getElementById("dnBtn");
@@ -42,10 +43,12 @@ function boredButton() {
     console.log(boredButton)
 }
 
-
+//fetch request
 document.addEventListener('DOMContentLoaded', () => {
     fetch('https://www.boredapi.com/api/activity')
-    .then(res => console.log(res))
+    .then(res => res.json())
+    .then(data => console.log(data))
+
 
     // .then(data => { 
     //     data.activity.forEach(hobby => {
@@ -57,8 +60,3 @@ document.addEventListener('DOMContentLoaded', () => {
     //     })    
     // })
 })
-
-//Fetch Request
-// function getActivity() {
-//     fetch('https://www.boredapi.com/api/activity')
-// }

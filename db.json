@@ -1,0 +1,54 @@
+{
+    "basic-ideas": [
+        {
+            "id": 1,
+            "date": "Watch a movie",
+            "description": "Go out to the movies to see something new! Or stay at home and have a movie marathon."
+        },
+        {
+            "id": 2,
+            "date": "Dinner date",
+            "description": "Head out to try a new, or stick to a favorite, restaurant."
+        },
+        {
+            "id": 3,
+            "date": "Walk/hike",
+            "description": "Check out a trail that you've been meaning to try."
+        },
+        {
+            "id": 4,
+            "date": "Museum",
+            "description": "Take a trip to a museum near you and make a day out of it."
+        },
+        {
+            "id": 5,
+            "date": "Game night",
+            "description": "Invite some friends over for a night filled with games and snacks."
+        },
+        {
+            "id": 6,
+            "date": "Try a new hobby",
+            "description": "If you have an interest in a hobby have your friend/partner join you in trying it out"
+        },
+        {
+            "id": 7,
+            "date": "Plan a trip",
+            "description": "Have you been talking about going on a trip? Well nows the time to plan it out together and get the wheels in motion! Make it happen! You can agree on a destination and look up what you want to do and when to go OR if you aren't sure where to go yet try making powerpoints to show each other with some of your top ideas. Planning can be fun!"
+        },
+        {
+            "id": 8,
+            "date": "Campfire",
+            "description": "If you can have a campfire outside then get yourself some s'more ingredients and get toasty by the fire. If you can't make some s'mores inside and put on a cozy show"
+        },
+        {
+            "id": 9,
+            "date": "Pizza Night",
+            "description": "Gather your favorite pizza toppings and make a pizza at home. For some added fun, have each person make their own pizza and everyone can split them."
+        },
+        {
+            "id": 10,
+            "date": "Coffee date",
+            "description": "Take a trip to your favorite coffee shop. You can take it to-go then walk over to get some pastries nearby."
+        }
+    ]
+}
