@@ -1,6 +1,5 @@
 body {
     background-color: lavender;
-    /* background-image: url(https://1drv.ms/u/s!AsnQQ8WD7LCRgpRHOezJmKtyZgmiuw?e=msijJY");  */
 }
 
 h1 {
@@ -15,8 +14,6 @@ h2 {
     color:rgb(154, 78, 154);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: center;
-    /* margin-right: 500px; */
-    /* display: inline; */
 }
 
 h3 {
@@ -25,7 +22,6 @@ h3 {
 }
 
 #basicIdeas {
-    /* background-color: aliceblue; */
     box-sizing: border-box;
     display: table-cell;
     width: 50%;
@@ -34,7 +30,6 @@ h3 {
 }
 
 #userIdeas {
-    /* background-color: beige; */
     box-sizing: border-box;
     display: table-cell;
     width: 50%;
@@ -48,7 +43,6 @@ h3 {
     padding: 1em 10px 20px 1.5em;
     display: inline-block;
     margin-top: 0em;
-    /* margin: 2.5em; */
     box-sizing: border-box;
     line-height: 46.5px;
     text-size-adjust: 100%;
