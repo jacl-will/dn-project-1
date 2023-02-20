@@ -16,8 +16,8 @@ form.addEventListener("submit", (event) => {
 
 const dateObj = document.getElementById("add");
 dateObj.addEventListener("click", (e) => {
-    var node = document.createElement("li")
-    var text = document.getElementById("newIdea").value;
+    let node = document.createElement("li")
+    let text = document.getElementById("newIdea").value;
     // var textnode = document.createTextNode(text);
     // node.appendChild(textnode);
     // document.getElementById("ultimateList").appendChild(node);
@@ -52,19 +52,48 @@ function renderAllDates(dates){
     </p>
     `
     let theDescription = document.createElement('p')
-    theDescription.className = 'theDes'
-    theDescription.innerHTML = `
-    <p>
-    ${dates.description}
-    </p>
-    `
+    // theDescription.className = 'theDes'
+    // theDescription.innerHTML = `
+    // <p2>
+    // ${dates.description}
+    // </p2>
+    // `
     //add dates to DOM
     document.querySelector('#randomDate').appendChild(theDates)
-    console.log(theDescription)
+    // console.log(theDescription)
     // document.querySelector('#randomDate').appendChild(theDescription)
+    theDates.addEventListener('mouseover', function(){
+        theDescription.innerText= `${dates.description}`;
+        document.querySelector('p').appendChild(theDescription)
+        console.log(theDates)
+    })
+   
+
+    // des.addEventListener("mouseover", (e) => {
+    //     let node = document.createElement('p')
+    //     let text = document.getElementsByClassName('theDes')
+    //     let textnode = document.createTextNode(text)
+    //     console.log(textnode)
+    // })
 }
+//Did not work 
 
+// const des = document.getElementsByClassName('theDes');
+// des.addEventListener("mouseover", function(){
+//     theDescription = document.createElement('p')
+//     theDescription.className = 'theDes'
+//     theDescription.innerHTML = `
+//     <p>
+//     ${dates.description}
+//     </p>
+//     `
+// })
 
+    // const dat = document.getElementsByClassName('theDat');
+    // const des = document.getElementsByClassName('theDes');
+    // dat.addEventListener("mouseover", function() {
+    //     des.innerHTML = "theDescription";
+    // })
 
 //fetch request
 function getDates(){
