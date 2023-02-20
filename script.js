@@ -42,25 +42,35 @@ dateObj.addEventListener("click", (e) => {
 // })
 
 //DOM Render Function ---->add way to randomly select 1 date
-function renderOneDate(date){
+function renderAllDates(dates){
     //Build date
-    let theDate = document.createElement('p')
-    theDate.className = 'theDate'
-    theDate.innerHTML = `
+    let theDates = document.createElement('p')
+    theDates.className = 'theDat'
+    theDates.innerHTML = `
     <p>
-    ${date.dateName}
+    ${dates.dateName}
     </p>
     `
-    let description = document.createElement
+    let theDescription = document.createElement('p')
+    theDescription.className = 'theDes'
+    theDescription.innerHTML = `
+    <p>
+    ${dates.description}
+    </p>
+    `
     //add dates to DOM
-    document.querySelector('#randomDate').appendChild(theDate)
+    document.querySelector('#randomDate').appendChild(theDates)
+    console.log(theDescription)
+    // document.querySelector('#randomDate').appendChild(theDescription)
 }
 
+
+
 //fetch request
-function getDate(){
+function getDates(){
     fetch('http://localhost:3000/basic-ideas')
     .then(res => res.json())
-    .then(dateData => dateData.forEach(date => renderOneDate(date)))
+    .then(dateData => dateData.forEach(dates => renderAllDates(dates)))
 }
 
 //Post to DOM
@@ -78,6 +88,6 @@ function getDate(){
 
 //initial render
 function initialize() {
-    getDate()
+    getDates()
 }
 initialize()
