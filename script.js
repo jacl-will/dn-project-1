@@ -17,23 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }) 
 })
 
-//LAST ATTEMPT <<<<<<<<<<<<<<<<<<<<<<<
-// const dateNight = document.getElementById("dnBtn");
-// dateNight.addEventListener('"click"', (event) => {
-//     // console.log("event", event)
-//     // const selectedDate = document.querySelector('date');
-//     // console.log(selectedDate.value)
-//     fetch('http://localhost:3000/basic-ideas')
-//     .then(res => res.json())
-//     // .then(res => console.log("response", res))
-//     // .then(dateData => dateData.forEach(date => renderOneDate(date)))
-//     .then(dateData => console.log(dateData))
-//         // const date = document.getElementById('randomDate'))
-
-//         // date.innerText = dateData.date
-
-// })
-
 //DOM Render Function ---->add way to randomly select 1 date
 function renderAllDates(dates){
     //Build date
@@ -45,21 +28,17 @@ function renderAllDates(dates){
     </p>
     `
     let theDescription = document.createElement('p')
-    // theDescription.className = 'theDes'
-    // theDescription.innerHTML = `
-    // <p2>
-    // ${dates.description}
-    // </p2>
-    // `
-    //add dates to DOM
     document.querySelector('#randomDate').appendChild(theDates)
-    // console.log(theDescription)
-    // document.querySelector('#randomDate').appendChild(theDescription)
+
+    //mouseover event
     theDates.addEventListener('mouseover', function(){
         theDescription.innerText= `${dates.description}`;
         document.querySelector('p').appendChild(theDescription)
-        console.log(theDates)
+        // console.log(theDates)
     })
+
+    //mouseout event
+    theDates.addEventListener('mouseout', (ev) => theDescription.innerText = '')
 }
 
 //fetch request
