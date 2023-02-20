@@ -21,39 +21,46 @@ h3 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-#basicIdeas {
+/* #basicIdeas {
     box-sizing: border-box;
     display: table-cell;
     width: 50%;
     float: left;
     text-align: center;
-}
+} */
 
 #userIdeas {
     box-sizing: border-box;
-    display: table-cell;
-    width: 50%;
+    /* display: table-cell; */
+    /* width: 50%; */
     vertical-align: middle;
-    float: left;
+    /* float: left; */
     text-align: center;
 }
 
 #personalIdeas {
     box-shadow: 0 5px 10px rgb(140, 139, 140);
-    padding: 1em 10px 20px 1.5em;
+    padding: 1em 45px 20px 1.5em;
     display: inline-block;
     margin-top: 0em;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     line-height: 46.5px;
     text-size-adjust: 100%;
 }
 
+#newIdeas {
+    padding: auto;
+}
+
+#description {
+    padding: 15px;
+}
 
 .combinedList {
     text-align: center;
-    margin-top: 300px;
+    /* margin-top: 300px; */
 }
 
-ul {
+/* ul {
     list-style: none;
-}
+} */

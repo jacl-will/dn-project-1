@@ -51,11 +51,10 @@ function renderOneDate(date){
     ${date.dateName}
     </p>
     `
+    let description = document.createElement
     //add dates to DOM
     document.querySelector('#randomDate').appendChild(theDate)
 }
-
-
 
 //fetch request
 function getDate(){
