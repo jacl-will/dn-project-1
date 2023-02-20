@@ -1,27 +1,20 @@
-
-
-//form submit
-const form = document.getElementById("personalIdeas") 
-form.addEventListener("submit", (event) => {
-    event.preventDefault()
-    // var addIdea = document.getElementById("newIdea").value]
-    let addIdea = {
-        date: event.target[0].value
-    }
-    //trying out based on post video
-    // renderNewIdea(dateObj)
-    // console.log("event", addIdea)
-   event.target.reset()
-}) 
-
-const dateObj = document.getElementById("add");
-dateObj.addEventListener("click", (e) => {
-    let node = document.createElement("li")
-    let text = document.getElementById("newIdea").value;
-    // var textnode = document.createTextNode(text);
-    // node.appendChild(textnode);
-    // document.getElementById("ultimateList").appendChild(node);
-    console.log(JSON.stringify(text))
+//loading DOM and submit form event listener
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById("personalIdeas").addEventListener("submit", (event) => {
+        event.preventDefault()
+        let addIdea = {
+            date: document.getElementById("newIdea").value,
+            description: document.getElementById("description").value
+        }
+        console.log("event", addIdea)
+        // add userIdea to date list
+        let node = document.createElement("li")
+            let text = document.getElementById("newIdea").value;
+            var textnode = document.createTextNode(text);
+            node.appendChild(textnode);
+        document.getElementById('randomDate').appendChild(node)
+       document.forms[0].reset();
+    }) 
 })
 
 //LAST ATTEMPT <<<<<<<<<<<<<<<<<<<<<<<
@@ -67,33 +60,7 @@ function renderAllDates(dates){
         document.querySelector('p').appendChild(theDescription)
         console.log(theDates)
     })
-   
-
-    // des.addEventListener("mouseover", (e) => {
-    //     let node = document.createElement('p')
-    //     let text = document.getElementsByClassName('theDes')
-    //     let textnode = document.createTextNode(text)
-    //     console.log(textnode)
-    // })
 }
-//Did not work 
-
-// const des = document.getElementsByClassName('theDes');
-// des.addEventListener("mouseover", function(){
-//     theDescription = document.createElement('p')
-//     theDescription.className = 'theDes'
-//     theDescription.innerHTML = `
-//     <p>
-//     ${dates.description}
-//     </p>
-//     `
-// })
-
-    // const dat = document.getElementsByClassName('theDat');
-    // const des = document.getElementsByClassName('theDes');
-    // dat.addEventListener("mouseover", function() {
-    //     des.innerHTML = "theDescription";
-    // })
 
 //fetch request
 function getDates(){
@@ -102,21 +69,9 @@ function getDates(){
     .then(dateData => dateData.forEach(dates => renderAllDates(dates)))
 }
 
-//Post to DOM
-// function addToJson(newIdea){
-//         fetch('http://localhost:3000/basic-ideas',{
-//         method: 'POST',
-//         headers: {
-//             'Content-Type': 'application/json'
-//         },
-//         body:JSON.stringify(newIdea)
-//     })
-//     .then(res => res.json())
-//     .then(data => console.log(data))
-// }
-
 //initial render
 function initialize() {
     getDates()
 }
 initialize()
+
