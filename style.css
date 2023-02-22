@@ -11,14 +11,15 @@ h1 {
 }
 
 h2 {
-    color:rgb(154, 78, 154);
+    color: rgb(211, 150, 242);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: center;
 }
 
-h3 {
-    color: rgb(211, 150, 242);
+h3, p {
+    color:rgb(154, 78, 154);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
 }
 
 /* #basicIdeas {
@@ -65,10 +66,23 @@ h3 {
     list-style: none;
 } */
 
-.theDat {
+.dateCard {
     background-color: #b8b8db50;
     margin-top: 10px;
     margin-left: 300px;
     margin-right: 300px;
     padding: 10px;
+}
+
+.theDat
+{
+    background-color: #b8b8db50;
+    margin-top: 10px;
+    margin-left: 300px;
+    margin-right: 300px;
+    padding: 10px;
+}
+
+#dnBtn {
+    text-align: center;
 }
