@@ -24,8 +24,17 @@ function addUserDate(event) {
     .then(res => res.json())
     .then(data => {
         const dates = document.querySelector(".dateList")
-        dates.innerHTML += renderSingleDate(data)   
-        //dates.insertAdjacentHTML   
+        let html =  `   
+        <div class="dateCard" id="${date.id}">
+                <h3 class="dateN">
+                    ${date.dateName}
+                </h3>
+                <p class="dateDes hidden"> 
+                    ${date.description}
+                </p>
+        </div>`
+        dates.insertAdjacentHTML("afterend", html)
+        addDateListeners()
         document.forms[0].reset();
     })
 }
@@ -37,18 +46,7 @@ function getDates(){
     .then(data => {
         const dates = document.querySelector(".dateList")
         dates.innerHTML = renderAllDates(data)
-        const dateCards = document.querySelectorAll('.dateCard')
-        //make own function 
-        Array.from(dateCards).forEach(dateCard => {
-            dateCard.addEventListener('mouseover', (e) => {
-                const description = dateCard.querySelector('.dateDes')
-                description.classList.remove('hidden')
-            })
-            dateCard.addEventListener('mouseout', (e) => {
-                const description = dateCard.querySelector('.dateDes')
-                description.classList.add('hidden')
-            })
-        })
+        addDateListeners()
     })
 }
 
@@ -66,6 +64,21 @@ function renderSingleDate(date) {
                 ${date.description}
             </p>
     </div>`
+}
+
+//event listeners
+function addDateListeners() {
+    const dateCards = document.querySelectorAll('.dateCard')
+    Array.from(dateCards).forEach(dateCard => {
+        dateCard.addEventListener('mouseover', (e) => {
+            const description = dateCard.querySelector('.dateDes')
+            description.classList.remove('hidden')
+        })
+        dateCard.addEventListener('mouseout', (e) => {
+            const description = dateCard.querySelector('.dateDes')
+            description.classList.add('hidden')
+        })
+    })
 }
 
 // dnButton to select random date ----->currently does nothing 
