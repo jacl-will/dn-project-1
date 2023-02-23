@@ -1,5 +1,5 @@
 {
-  "basicIdeas": [
+  "dates": [
     {
       "id": 1,
       "dateName": "Watch a movie",
@@ -49,6 +49,11 @@
       "id": 10,
       "dateName": "Coffee date",
       "description": "Take a trip to your favorite coffee shop. You can take it to-go then walk over to get some pastries nearby."
+    },
+    {
+      "dateName": "Picnic",
+      "description": "Go outside with food",
+      "id": 11
     }
   ]
 }

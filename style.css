@@ -74,6 +74,10 @@ h3, p {
     padding: 10px;
 }
 
+.hidden {
+    display: none;
+}
+
 .theDat
 {
     background-color: #b8b8db50;
