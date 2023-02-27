@@ -24,10 +24,7 @@ h3, p {
 
 #userIdeas {
     box-sizing: border-box;
-    /* display: table-cell; */
-    /* width: 50%; */
     vertical-align: middle;
-    /* float: left; */
     text-align: center;
 }
 
@@ -36,7 +33,6 @@ h3, p {
     padding: 1em 45px 20px 1.5em;
     display: inline-block;
     margin-top: 0em;
-    /* box-sizing: border-box; */
     line-height: 46.5px;
     text-size-adjust: 100%;
 }
