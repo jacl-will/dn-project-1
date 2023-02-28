@@ -11,17 +11,32 @@ They can hover over the dates to get an idea of what they can do if that date ge
 
 __How to contribute__
 ---------------------
-The code is connected to a db.json file rather than an established API. In order to contribute to this project you would need to download JSON server. 
+The code is connected to a db.json file. In order to contribute to this project you would need to download JSON server. 
 
-_Setting up JSON Server_
+_Setting up JSON Server_:
+---
 Information gathered from [https://www.digitalocean.com/community/tutorials/json-server]
-To install JSON Server you will enter the below command into your terminal 
+To install JSON Server you will enter the below command into your terminal.
 
  `$ npm install -g json-server`
 
- Now you shoud be able to create a mock json server or add to the one listed in the db.json file. 
+ Now you shoud be able to create a mock json server or add to the one listed within the db.json file. To do this you would format the data as follows:
+
+ `"dates": [
+    {
+      "id": #,
+      "dateName": "Name of date idea",
+      "description": "Description of date idea."
+    },
+    {
+      "id": #,
+      "dateName": "Name of date idea",
+      "description": "Description of date idea."
+    },]}`
+
 In order to view the app with the information being pulled from the db.json file you will need to enter the following command: 
 
 `json-server --watch db.json` 
 
 This will open up the app with the fetched information from the json file. 
+
