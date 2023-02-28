@@ -1,10 +1,27 @@
-Project 1 : Date Night
+__Project 1 : Date Night__
 ===============================
 
-Description 
-------------
+__Description__
+----------------
 Date Night is a tool that couples, friends, and families can use to decide on a date/activity to do when everyone isn't sure, or can't agree on one. It makes the choice for you to give you more time to enjoy your date rather than be stuck in the planning phase. 
 
-How it does this is by allowing the user to add their own ideas to this list of dates. Once the list is to their liking then they will click the button that will randomly select the date for them. 
+How it does this is by allowing the user to add their own ideas to a basic list of dates. Once the list is to their liking then they will click the button that will randomly select the date for them. 
 
 They can hover over the dates to get an idea of what they can do if that date gets chosen. 
+
+__How to contribute__
+---------------------
+The code is connected to a db.json file rather than an established API. In order to contribute to this project you would need to download JSON server. 
+
+_Setting up JSON Server_
+Information gathered from [https://www.digitalocean.com/community/tutorials/json-server]
+To install JSON Server you will enter the below command into your terminal 
+
+ `$ npm install -g json-server`
+
+ Now you shoud be able to create a mock json server or add to the one listed in the db.json file. 
+In order to view the app with the information being pulled from the db.json file you will need to enter the following command: 
+
+`json-server --watch db.json` 
+
+This will open up the app with the fetched information from the json file. 
