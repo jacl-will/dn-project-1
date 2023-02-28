@@ -69,10 +69,11 @@ function renderSingleDate(date) {
 //event listeners
 function addDateListeners() {
     const dateCards = document.querySelectorAll('.dateCard')
+    // const dates = document.querySelectorAll('.date')
     const rDateBtn = document.getElementById('dnBtn')
     const result = document.getElementById('randomDate')
     //convert nodelist to arry 
-    const arrList = Array.from(dateCards)
+    // const arrList = Array.from(dateCards)
     Array.from(dateCards).forEach(dateCard => {
         dateCard.addEventListener('mouseover', (e) => {
             const description = dateCard.querySelector('.dateDes')
@@ -83,49 +84,11 @@ function addDateListeners() {
             description.classList.add('hidden')
         })
     })
-    rDateBtn.addEventListener('click', (e) => {
-        arrList[Math.floor(Math.random()*arrList.length)];
-        // return result.append()
-       
-    })
-
-}
-
-// dnButton to select random date ----->currently does nothing 
-//can make an arrow function 
-//     const rDateBtn = document.getElementById('dnBtn');
-//     rDateBtn.addEventListener('click', dnButton);
-
-//     function dnButton() {
-//         const dateCards = document.querySelectorAll('.dateCard')
-//         Array.from(dateCards).forEach(dateCard => {
-//             dateCard[Math.floor(Math.random()*dateCard.length)];
-//     console.log(dateCard)
-//     })
-// }
-// const rDateBtn = document.getElementById('dnBtn');
-// const dateCards = document.querySelectorAll('.dateCard')
-// let date = {
-//     dateName: `${date.dateName}`,
-//     description: `${date.description}`
-// }
-// let html =  `   
-//         <div class="dateCard" id="${date.id}">
-//                 <h3 class="dateN">
-//                     ${date.dateName}
-//                 </h3>
-//                 <p class="dateDes"> 
-//                     ${date.description}
-//                 </p>
-//         </div>`
-// const rDateBtn = document.getElementById('dnBtn');
-// rDateBtn.addEventListener('click', (e) => { 
-//     const dateArr = document.getElementsByClassName('dateCard')
-//     dateArr[Math.floor(Math.random()*dateArr.length)];
-//     console.log(dateArr)
-// }
-//     // Array.from(dateCards).forEach(dateCard => {
-//     //     dateCard[Math.floor(Math.random()*dateCard.length)];
-    
-//     // console.log(rDateBtn)
-// )
+    // Array.from(dateCards).forEach(dateCard => {
+        rDateBtn.addEventListener('click', (e) => {
+        const randomDateCard = dateCards[Math.floor(Math.random()*dateCards.length)];
+        result.innerHTML = ""
+        result.append(randomDateCard)
+    //    console.log(randomDateCard)
+        })
+    }
