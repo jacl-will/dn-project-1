@@ -1,12 +1,10 @@
-
-//loading DOM and submit form event listener
 document.addEventListener('DOMContentLoaded', () => {
     getDates()
     document.getElementById("personalIdeas").addEventListener("submit", addUserDate)
 
 })
 
-//form submit and post 
+
 function addUserDate(event) {
     event.preventDefault()
     const date = {
@@ -39,7 +37,7 @@ function addUserDate(event) {
     })
 }
 
-//fetch request
+
 function getDates(){
     fetch('http://localhost:3000/dates')
     .then(res => res.json())
@@ -66,29 +64,27 @@ function renderSingleDate(date) {
     </div>`
 }
 
-//event listeners
+
 function addDateListeners() {
     const dateCards = document.querySelectorAll('.dateCard')
-    // const dates = document.querySelectorAll('.date')
     const rDateBtn = document.getElementById('dnBtn')
     const result = document.getElementById('randomDate')
-    //convert nodelist to arry 
-    // const arrList = Array.from(dateCards)
+
     Array.from(dateCards).forEach(dateCard => {
         dateCard.addEventListener('mouseover', (e) => {
             const description = dateCard.querySelector('.dateDes')
             description.classList.remove('hidden')
         })
+
         dateCard.addEventListener('mouseout', (e) => {
             const description = dateCard.querySelector('.dateDes')
             description.classList.add('hidden')
         })
     })
-    // Array.from(dateCards).forEach(dateCard => {
+
         rDateBtn.addEventListener('click', (e) => {
         const randomDateCard = dateCards[Math.floor(Math.random()*dateCards.length)];
         result.innerHTML = ""
         result.append(randomDateCard)
-    //    console.log(randomDateCard)
         })
     }

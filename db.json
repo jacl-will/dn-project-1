@@ -49,11 +49,6 @@
       "id": 10,
       "dateName": "Coffee date",
       "description": "Take a trip to your favorite coffee shop. You can take it to-go then walk over to get some pastries nearby."
-    },
-    {
-      "dateName": "Going for a drive",
-      "description": "Driving through the countryside",
-      "id": 11
     }
   ]
 }
