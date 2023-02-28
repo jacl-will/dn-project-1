@@ -58,6 +58,8 @@ h3, p {
 }
 
 #dnBtn {
+    display: block;
+    margin: auto;
     text-align: center;
     
 }
