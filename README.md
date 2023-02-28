@@ -40,3 +40,9 @@ In order to view the app with the information being pulled from the db.json file
 
 This will open up the app with the fetched information from the json file. 
 
+__Future desires for this project__ 
+--------------
+* Adding ability to delete dates from list that user does not want 
+* Adding visual elements that would make the app more appealing such as pictures, pop up element once date is selected, and more
+* Adding ability for users to put in preferences (such as price range, family friendly, seasonal, and more) or necessities (such as date accessibility for those with neurodivergences, physical disabilities and more)
+* Add a feature that allows for local events to be added when user chooses to input zipcode
