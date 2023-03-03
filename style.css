@@ -57,9 +57,13 @@ h3, p {
     display: none;
 }
 
-#dnBtn {
+#dnBtn{
     display: block;
     margin: auto;
     text-align: center;
-    
+}
+
+#dnBtn:hover {
+    background-color:rgb(103, 33, 103);
+    color: white;
 }
