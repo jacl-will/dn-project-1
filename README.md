@@ -9,6 +9,8 @@ How it does this is by allowing the user to add their own ideas to a basic list 
 
 They can hover over the dates to get an idea of what they can do if that date gets chosen. 
 
+Video walkthrough here: [https://youtu.be/qcoyom13ppc]
+
 __How to contribute__
 ---------------------
 The code is connected to a db.json file. In order to contribute to this project you would need to download JSON server. 
@@ -32,7 +34,7 @@ To install JSON Server you will enter the below command into your terminal.
       "id": #,
       "dateName": "Name of date idea",
       "description": "Description of date idea."
-    },]}`
+    },]`
 
 In order to view the app with the information being pulled from the db.json file you will need to enter the following command: 
 
@@ -46,3 +48,5 @@ __Future desires for this project__
 * Adding visual elements that would make the app more appealing such as pictures, pop up element once date is selected, and more
 * Adding ability for users to put in preferences (such as price range, family friendly, seasonal, and more) or necessities (such as date accessibility for those with neurodivergences, physical disabilities and more)
 * Add a feature that allows for local events to be added when user chooses to input zipcode
+
+
