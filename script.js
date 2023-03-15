@@ -4,6 +4,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
 })
 
+function getDates(){
+    fetch('http://localhost:3000/dates')
+    .then(res => res.json())
+    .then(data => {
+        const dates = document.querySelector(".dateList")
+        dates.innerHTML = renderAllDates(data)
+        addDateListeners()
+    })
+}
+
+function renderAllDates(dates) {
+    return dates.map(dn => renderSingleDate(dn)).join("")
+}
+
+function renderSingleDate(date) {
+    return `   
+    <div class="dateCard" id="${date.id}">
+            <h3 class="dateN">
+                ${date.dateName}
+            </h3>
+            <p class="dateDes hidden"> 
+                ${date.description}
+            </p>
+    </div>`
+}
 
 function addUserDate(event) {
     event.preventDefault()
@@ -36,34 +61,6 @@ function addUserDate(event) {
         document.forms[0].reset();
     })
 }
-
-
-function getDates(){
-    fetch('http://localhost:3000/dates')
-    .then(res => res.json())
-    .then(data => {
-        const dates = document.querySelector(".dateList")
-        dates.innerHTML = renderAllDates(data)
-        addDateListeners()
-    })
-}
-
-function renderAllDates(dates) {
-    return dates.map(dn => renderSingleDate(dn)).join("")
-}
-
-function renderSingleDate(date) {
-    return `   
-    <div class="dateCard" id="${date.id}">
-            <h3 class="dateN">
-                ${date.dateName}
-            </h3>
-            <p class="dateDes hidden"> 
-                ${date.description}
-            </p>
-    </div>`
-}
-
 
 function addDateListeners() {
     const dateCards = document.querySelectorAll('.dateCard')
